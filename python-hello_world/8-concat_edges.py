@@ -2,4 +2,4 @@
 str = "Python is an interpreted, interactive, object-oriented programming\
  language that combines remarkable power with very clear syntax"
 
-print(f"{str[39:66]} {str[107:112]}{str[0:6]}")
+print(str.split()[5], str.split()[6], str.split()[12], str.split()[0])
