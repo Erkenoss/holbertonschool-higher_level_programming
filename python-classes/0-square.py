@@ -3,4 +3,5 @@
 
 
 class Square:
-    """Empty class square, do nothing for now"""
+    """Class square, do nothing for now"""
+    pass
