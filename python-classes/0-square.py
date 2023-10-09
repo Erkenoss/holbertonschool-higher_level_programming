@@ -4,4 +4,3 @@
 
 class Square:
     """Class square, do nothing for now"""
-    pass
