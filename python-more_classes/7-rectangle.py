@@ -67,16 +67,19 @@ class Rectangle:
     def __str__(self):
         str_rect = ''
         if self.__height != 0 and self.__width != 0:
-            for _ in range(self.__height):
-                if _ == self.__height - 1:
-                    str_rect += str(self.print_symbol) * self.__width
-                else:
-                    str_rect += str(self.print_symbol) * self.__width + '\n'
+            if self.print_symbol:
+                for _ in range(self.__height):
+                    if _ == self.__height - 1:
+                        str_rect += str(self.print_symbol) * self.__width
+                    else:
+                        str_rect += str(self.print_symbol) * self.__width + '\n'
         return str_rect
 
+    """euh..."""
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
+    """print when rectangle is delete"""
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
