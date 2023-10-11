@@ -5,6 +5,7 @@
 class Rectangle:
     """Start of the class"""
     number_of_instances = 0
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
@@ -17,7 +18,6 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
 
-        self.print_symbol = "#"
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
@@ -65,14 +65,12 @@ class Rectangle:
 
     """print the rectangle"""
     def __str__(self):
-        str_rect = ''
-        if self.__height != 0 and self.__width != 0 and \
-        isinstance(self.print_symbol, str):
-            for _ in range(self.__height):
-                if _ == self.__height - 1:
-                    str_rect += str(self.print_symbol) * self.__width
-                else:
-                    str_rect += str(self.print_symbol) * self.__width + '\n'
+        str_rect = ""
+        if self.__height != 0 and self.__width != 0:
+            for row in range(self.height):
+                for column in range(self.width):
+                    str_rect += str(self.print_symbol)
+                str_rect += "\n"
         return str_rect
 
     """euh..."""
