@@ -6,7 +6,7 @@ class Rectangle:
     """Start of the class"""
     number_of_instances = 0
 
-    def __init__(self, width=0, height=0, print_symbol="#"):
+    def __init__(self, width=0, height=0):
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
         if width < 0:
@@ -17,10 +17,10 @@ class Rectangle:
         if height < 0:
             raise ValueError("height must be >= 0")
 
+        self.print_symbol = "#"
         self.__width = width
         self.__height = height
         Rectangle.number_of_instances += 1
-        self.print_symbol = print_symbol
 
     """Getter of the width"""
     @property
