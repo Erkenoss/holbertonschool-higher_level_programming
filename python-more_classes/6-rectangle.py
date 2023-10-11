@@ -73,11 +73,9 @@ class Rectangle:
                     str_rect += '#' * self.__width + '\n'
         return str_rect
 
-    """repr a rectangle"""
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
-    """print when delete rectangle"""
     def __del__(self):
         Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
