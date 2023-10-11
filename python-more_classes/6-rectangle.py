@@ -3,9 +3,9 @@
 
 
 class Rectangle:
-    number_of_instances = 0
-
     """Start of the class"""
+
+    number_of_instances = 0
     def __init__(self, width=0, height=0):
         if not isinstance(width, int):
             raise TypeError("width must be an integer")
