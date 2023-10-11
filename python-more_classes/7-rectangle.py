@@ -71,7 +71,7 @@ class Rectangle:
                 for column in range(self.width):
                     str_rect += str(self.print_symbol)
                 str_rect += "\n"
-            rec_string = rec_string[:-1]
+            str_rect = str_rect[:-1]
         return str_rect
 
     """euh..."""
