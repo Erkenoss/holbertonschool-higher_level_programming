@@ -73,6 +73,7 @@ class Rectangle:
                     str_rect += '#' * self.__width + '\n'
         return str_rect
 
+    """repr a rectangle"""
     def __repr__(self):
         return "Rectangle({}, {})".format(self.__width, self.__height)
 
