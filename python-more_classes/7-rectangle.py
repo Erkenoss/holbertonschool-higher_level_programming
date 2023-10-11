@@ -66,13 +66,12 @@ class Rectangle:
     """print the rectangle"""
     def __str__(self):
         str_rect = ''
-        if self.__height != 0 and self.__width != 0:
-            if self.print_symbol:
-                for _ in range(self.__height):
-                    if _ == self.__height - 1:
-                        str_rect += str(self.print_symbol) * self.__width
-                    else:
-                        str_rect += str(self.print_symbol) * self.__width + '\n'
+        if self.__height != 0 and self.__width != 0 and self.print_symbol is not None:
+            for _ in range(self.__height):
+                if _ == self.__height - 1:
+                    str_rect += str(self.print_symbol) * self.__width
+                else:
+                    str_rect += str(self.print_symbol) * self.__width + '\n'
         return str_rect
 
     """euh..."""
