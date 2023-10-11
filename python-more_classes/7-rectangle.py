@@ -66,7 +66,8 @@ class Rectangle:
     """print the rectangle"""
     def __str__(self):
         str_rect = ''
-        if self.__height != 0 and self.__width != 0 and self.print_symbol is not None:
+        if self.__height != 0 and self.__width != 0 and \
+        isinstance(self.print_symbol, str):
             for _ in range(self.__height):
                 if _ == self.__height - 1:
                     str_rect += str(self.print_symbol) * self.__width
