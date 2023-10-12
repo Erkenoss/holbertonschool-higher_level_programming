@@ -43,7 +43,7 @@ Last name is empty:
 .. code-block:: python
 
     >>> say_my_name("Fabien", "")
-    My name is Fabien  
+    My name is Fabien
 
 First and last name are empty string:
 -------------------------------------
@@ -51,7 +51,7 @@ First and last name are empty string:
 .. code-block:: python
 
     >>> say_my_name("", "")
-    My name is
+    My name is  
 
 Last name is missing:
 --------------------
