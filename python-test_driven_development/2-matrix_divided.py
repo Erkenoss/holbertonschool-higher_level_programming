@@ -3,9 +3,12 @@
 
 
 def matrix_divided(matrix, div):
-    if not all(isinstance(row, list) for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists)\
-            of integers/floats")
+    if (not isinstance(matrix, list) or matrix == [] or
+            not all(isinstance(row, list) for row in matrix) or
+            not all((isinstance(ele, int) or isinstance(ele, float))
+                    for ele in [num for row in matrix for num in row])):
+        raise TypeError("matrix must be a matrix (list of lists) of "
+                        "integers/floats")
 
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
