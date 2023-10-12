@@ -22,3 +22,9 @@ NameError: name 'none' is not defined
 >>> say_my_name("Papa", "Maman", "Frangin")
 Traceback (most recent call last):
 TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+>>> say_my_name(["mary"], "poppins")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+>>> say_my_name("mary", ["poppins"])
+Traceback (most recent call last):
+TypeError: last_name must be a string
