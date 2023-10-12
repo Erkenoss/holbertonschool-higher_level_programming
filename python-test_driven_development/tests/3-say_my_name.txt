@@ -31,3 +31,6 @@ TypeError: last_name must be a string
 >>> say_my_name("mary", 2)
 Traceback (most recent call last):
 TypeError: last_name must be a string
+>>> say_my_name("mary" , None)
+Traceback (most recent call last):
+TypeError: last_name must be a string
