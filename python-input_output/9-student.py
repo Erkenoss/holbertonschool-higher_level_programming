@@ -2,7 +2,6 @@
 """Start of class student"""
 
 
-
 class Student:
     """class student"""
     def __init__(self, first_name, last_name, age):
@@ -17,4 +16,3 @@ class Student:
             "age": self.age
         }
         return student_data
-    
