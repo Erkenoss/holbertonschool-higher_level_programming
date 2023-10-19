@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Start of function Pascal_triangle"""
 
+
 def pascal_triangle(n):
     """Return a matrix with pascal triangle"""
     if n <= 0:
