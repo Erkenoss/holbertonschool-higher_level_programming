@@ -17,4 +17,7 @@ class Base:
 
     def to_json_string(list_dictionaries):
         """return a dict in format json"""
-        return json.dumps(list_dictionaries)
+        if list_dictionaries:
+            return json.dumps(list_dictionaries)
+        else:
+            return []
