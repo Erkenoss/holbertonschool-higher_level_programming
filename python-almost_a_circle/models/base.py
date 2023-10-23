@@ -25,6 +25,7 @@ class Base:
 
     @classmethod
     def save_to_file(cls, list_objs):
+        """save a file"""
         if list_objs is None:
             list_objs = []
         filename = f"{cls.__name__}.json"
