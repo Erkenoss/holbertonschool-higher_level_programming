@@ -4,7 +4,14 @@ from models.base import Base
 
 
 class Rectangle(Base):
-    """Start of class Rectagle"""
+    """A class that create a rectangle.
+
+    instances:
+        width: the int value of the width of the rectancle.
+        height: the int value of the height of the rectangle.
+        x:
+        y:
+        """
     def __init__(self, width, height, x=0, y=0, id=None):
         super().__init__(id)
         self.__width = width
