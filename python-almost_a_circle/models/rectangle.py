@@ -28,7 +28,6 @@ class Rectangle(Base):
         self.__x = x
         super().__init__(id)
 
-
     @property
     def width(self):
         return self.__width
