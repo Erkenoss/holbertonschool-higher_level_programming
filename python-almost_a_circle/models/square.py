@@ -38,9 +38,9 @@ class Square(Rectangle):
     def to_dictionary(self):
         """return a dict"""
         new_dict = {
-            'id' : self.id,
-            'size' : self.width,
-            'x' : self.x,
-            'y' : self.y
+            'id': self.id,
+            'size': self.width,
+            'x': self.x,
+            'y': self.y
         }
         return new_dict
