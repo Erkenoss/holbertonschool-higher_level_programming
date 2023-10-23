@@ -35,7 +35,7 @@ class Base:
             json.dump([], json_file)
 
         if type(list_objs[0]).__name__ == "Rectangle":
-            new_dict = [item.to_dictionary() for item in list_objs]
+            new_dict = [item.__dict__ for item in list_objs]
             json_string = cls.to_json_string(new_dict)
             json.dump(new_dict, json_file)
 
