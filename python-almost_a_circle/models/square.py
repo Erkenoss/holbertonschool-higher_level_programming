@@ -10,6 +10,14 @@ class Square(Rectangle):
             raise TypeError("size must be an integer")
         if size <= 0:
             raise ValueError("size must be > 0")
+        if not isinstance(x, int):
+            raise TypeError("x must be an integer")
+        if x < 0:
+            raise ValueError("x must be >= 0")
+        if not isinstance(y, int):
+            raise TypeError("y must be an integer")
+        if y < 0:
+            raise ValueError("y must be >= 0")
         super().__init__(size, size, x, y, id)
 
     def __str__(self):
