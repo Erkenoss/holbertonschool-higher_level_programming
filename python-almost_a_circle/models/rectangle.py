@@ -173,6 +173,7 @@ class Rectangle(Base):
                 setattr(self, key, value)
 
     def to_dictionary(self):
+        """Return a dict"""
         new_dict = {
             'width': self.__width,
             'height': self.__height,
@@ -180,5 +181,4 @@ class Rectangle(Base):
             'y': self.y,
             'id': self.id
         }
-
         return new_dict
