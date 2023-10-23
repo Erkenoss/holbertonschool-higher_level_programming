@@ -163,8 +163,7 @@ class Rectangle(Base):
 - {self.__width}/{self.__height}"
 
     def update(self, *args):
+        """Update the attribute"""
         attr = ['id', 'width', 'height', 'x', 'y']
-
         for i, arg in enumerate(args):
-            if i < len(attr):
-                setattr(self, attr[i], arg)
+            setattr(self, attr[i], arg)
