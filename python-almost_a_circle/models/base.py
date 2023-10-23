@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """class base"""
 import json
-import os
+
 
 class Base:
     """Start of base class"""
