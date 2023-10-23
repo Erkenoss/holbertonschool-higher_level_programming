@@ -28,8 +28,6 @@ class Base:
         if list_objs is None:
             list_objs = []
         filename = f"{cls.__name__}.json"
-        if os.path.exists(filename):
-            os.remove(filename)
         with open(filename, "w") as file:
             dict_list = [obj.__dict__ for obj in list_objs]
             file.write(cls.to_json_string(dict_list))
