@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 """class base"""
 import json
-
+import os
 
 class Base:
     """Start of base class"""
@@ -28,6 +28,8 @@ class Base:
         if list_objs is None:
             list_objs = []
         filename = f"{cls.__name__}.json"
-        with open(filename, "w", encoding="utf-8") as file:
+        if os.path.exists(filename):
+            os.remove(filename)
+        with open(filename, "w") as file:
             dict_list = [obj.__dict__ for obj in list_objs]
             file.write(cls.to_json_string(dict_list))
