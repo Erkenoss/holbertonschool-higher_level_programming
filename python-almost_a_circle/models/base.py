@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """class base"""
 import json
+import os
 
 
 class Base:
@@ -47,3 +48,15 @@ class Base:
             dummy = cls(1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        filename = f"{cls.__name__}.json"
+        if not os.path.exists(filename):
+            return []
+        with open(filename, 'r', encoding="utf-8") as file:
+            json_file = file.read()
+            new_dict = cls.from_json_string(json_file)
+            instances = [cls.create(**data) for data in new_dict]
+
+        return instances
