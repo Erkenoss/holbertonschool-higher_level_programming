@@ -1,8 +1,5 @@
 import unittest
 from models.base import Base
-from models.rectangle import Rectangle
-from models.square import Square
-
 
 
 class TestBase(unittest.TestBase):
@@ -24,7 +21,7 @@ class TestBase(unittest.TestBase):
 
     def test_5(self):
         Base.to_json_string([None])
- 
+
     def test_6(self):
         Base.to_json_string([])
 
@@ -67,7 +64,7 @@ class TestBase(unittest.TestBase):
     def test_19(self):
         Base.create("Rectangle", {})
 
-    def test_19(self):
+    def test_20(self):
         Base.create("Square", {})
 
     if __name__ == '__main__':
