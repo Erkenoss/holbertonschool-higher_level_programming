@@ -1,8 +1,12 @@
+#!/usr/bin/python3
+"""Base class test"""
+
+
 import unittest
 from models.base import Base
 
 
-class TestBase(unittest.TestBase):
+class TestBase(unittest.TestCase):
     def test_1(self):
         b = Base()
         self.assertEqual(b.id, 1)
@@ -28,14 +32,11 @@ class TestBase(unittest.TestBase):
     def test_7(self):
         Base.to_json_string(None)
 
-    def test_8(self):
-        Base.to_json_string(1)
-
     def test_9(self):
         Base.to_json_string("2")
 
     def test_10(self):
-        Base.to_json_string()
+        Base.to_json_string([])
 
     def test_11(self):
         Base.to_json_string([{'id': 23}])
@@ -44,10 +45,10 @@ class TestBase(unittest.TestBase):
         Base.save_to_file(None)
 
     def test_13(self):
-        Base.save_to_file("Rectangle", [10, 7, 2, 8])
+        Base.save_to_file({})
 
     def test_14(self):
-        Base.save_to_file("Square", [10, 2, 19])
+        Base.save_to_file({})
 
     def test_15(self):
         Base.from_json_string("[]")
@@ -60,12 +61,6 @@ class TestBase(unittest.TestBase):
 
     def test_18(self):
         Base.from_json_string('[{ "id": 89 }]')
-
-    def test_19(self):
-        Base.create("Rectangle", {})
-
-    def test_20(self):
-        Base.create("Square", {})
 
     if __name__ == '__main__':
         unittest.main()

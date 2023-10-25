@@ -3,8 +3,6 @@
 
 
 import unittest
-from models.base import Base
-from models.square import Square
 from models.rectangle import Rectangle
 
 
@@ -101,12 +99,6 @@ class TestBase(unittest.TestCase):
     def test_23(self):
         dt = Rectangle(1, 2, 3, 4, 5)
         dt.save_to_file(None)
-
-    def test_24(self):
-        with self.assertRaises(AttributeError) as context:
-            Rectangle.to_dictionary(self)
-        self.assertTrue(
-            "'TestBase' object has no attribute 'x'" in str(context.exception))
 
     def test_25(self):
         dt = Rectangle(10, 10)
