@@ -1,3 +1,4 @@
 -- count nbr of record
 SELECT COUNT(*) AS Records
-FROM first_table;
+FROM hbtn_0c_0.first_table
+WHERE ID = 89;
