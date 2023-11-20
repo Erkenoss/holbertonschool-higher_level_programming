@@ -1,4 +1,3 @@
 -- insert a new row in a table
-UPDATE first_table
-SET name = 'Best School'
-WHERE id = 89
+INSERT INTO first_table (id, name)
+VALUES (89, 'Best School');
