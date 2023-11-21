@@ -1,5 +1,5 @@
 -- list all the citie in a table
 SELECT id, name
 FROM cities
-WHERE state_id = @california_id
-ORDER BY id ASC;
+WHERE state_id = (SELECT id FROMM states WHERE name = 'California')
+ORDER BY id cities.id;
