@@ -23,8 +23,8 @@ if __name__ == "__main__":
             """
     cursor.execute(query)
 
-    for row in cursor.fetchall:
+    for row in cursor.fetchall():
         print(row)
 
-    cursor.close
-    database.close
+    cursor.close()
+    database.close()
