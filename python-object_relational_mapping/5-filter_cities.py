@@ -21,7 +21,7 @@ if __name__ == "__main__":
     state_to_search = sys.argv[4]
     query = """SELECT cities.name
             FROM cities JOIN states
-            ON cities.states_id = states.id
+            ON cities.state_id = states.id
             WHERE states.name = %s
             ORDER BY cities.id
             """
