@@ -27,8 +27,10 @@ if __name__ == "__main__":
             """
     cursor.execute(query, (state_to_search,))
 
-    for row in cursor.fetchall():
-        print(row[0])
+    _print = cursor.fetchall()
+    name = [row[0] for row in _print]
+
+    print(", " .join(name))
 
     cursor.close()
     database.close()
