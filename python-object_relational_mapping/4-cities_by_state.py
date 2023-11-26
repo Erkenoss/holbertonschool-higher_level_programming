@@ -16,7 +16,11 @@ if __name__ == "__main__":
     )
 
     cursor = database.cursor()
-    query = "SELECT * FROM cities ORDER BY cities.id"
+    query = """SELECT cities.id, cities.name, states.name
+            FROM cities JOIN states
+            ON cities.state_id = states.id
+            ORDER BY cities.id
+            """
     cursor.execute(query)
 
     for row in cursor.fetchall:
