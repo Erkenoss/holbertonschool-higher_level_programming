@@ -28,7 +28,7 @@ if __name__ == "__main__":
     cursor.execute(query, (state_to_search,))
 
     for row in cursor.fetchall():
-        print(row)
+        print(row[0])
 
     cursor.close()
     database.close()
