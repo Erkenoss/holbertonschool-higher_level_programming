@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     result = (
         session.query(City, State)
-        .join(State, City.state_id == State.id)
+        .filter(State, City.state_id == State.id)
         .order_by(City.id)
         .all()
     )
